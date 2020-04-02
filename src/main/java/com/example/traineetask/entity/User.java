@@ -1,6 +1,6 @@
 package com.example.traineetask.entity;
 
-import com.example.traineetask.enums.Role;
+import com.example.traineetask.enums.UserRole;
 import com.example.traineetask.enums.UserStatus;
 import lombok.Data;
 
@@ -17,7 +17,7 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private Role role;
+    private UserRole role;
     private UserStatus userStatus;
     private LocalDateTime lastVisit;
     private LocalDateTime dateOfRegistration;
