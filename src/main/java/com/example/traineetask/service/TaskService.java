@@ -3,6 +3,8 @@ package com.example.traineetask.service;
 import com.example.traineetask.dto.TaskDto;
 import com.example.traineetask.entity.Task;
 
+import java.util.List;
+
 public interface TaskService {
 
     Task create(Task task);
@@ -11,7 +13,11 @@ public interface TaskService {
 
     Task getByTitle(String title);
 
-    Task update (String id, TaskDto taskDto);
+    Task update(String id, TaskDto taskDto);
 
-    void delete (String id);
+    void delete(String id);
+
+    void addContributions(String id, String email);
+
+    List<Task> getAllTasks();
 }

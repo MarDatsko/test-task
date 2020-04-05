@@ -1,6 +1,7 @@
 package com.example.traineetask.service;
 
 import com.example.traineetask.dto.UserDto;
+import com.example.traineetask.entity.Task;
 import com.example.traineetask.entity.User;
 
 public interface UserService {
@@ -11,7 +12,9 @@ public interface UserService {
 
     User getByEmail(String email);
 
-    User update (String id, UserDto userDto);
+    User update(String id, UserDto userDto);
 
-    void delete (String id);
+    void delete(String id);
+
+    void addTaskToUserTasksList(Task task);
 }

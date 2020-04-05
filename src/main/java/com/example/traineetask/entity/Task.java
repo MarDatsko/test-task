@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Document(collection = "tasks")
@@ -26,6 +27,8 @@ public class Task {
     private LocalDateTime dateOfCreate;
 
     private TaskStatus taskStatus;
+
+    private List<String> listContribution;
 
     @DBRef
     private User user;
